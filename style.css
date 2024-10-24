@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  background-color: #2c3e50;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.logo{
+font-size: 30px;
+color: white;
+font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1abc9c;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  transition: width 0.3s ease;
+  width: 180px;
+}
+
+.search-bar input:focus {
+  width: 250px;
+}
+
+.cart {
+  margin-left: 20px;
+}
+
+.cart-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-icon {
+  height: 24px;
+  filter: invert(1);
+}
+
+.cart-btn:hover .cart-icon {
+  filter: invert(0.7);
+}
+
+.cart-btn::after {
+  content: '3'; /* Example cart item count */
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 7px;
+  font-size: 12px;
+}
+
+.mens-collection {
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: brown;
+  text-decoration-thickness: 6px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  /* Center the men's cards */
+  flex-wrap: wrap;
+  /* Wrap men's cards if the screen is small */
+  gap: 20px;
+  /* Space between men's cards */
+  margin: 20px;
+}
+
+/* Basic card styling */
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image inside card */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Card content styling */
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-price {
+  font-size: 1.2em;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.card-rating {
+  margin-bottom: 15px;
+}
+
+.card-rating span {
+  color: gold;
+  font-size: 1.2em;
+}
+
+/* Order button */
+.card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #71db34;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.card-btn:hover {
+  background-color: pink;
+}
+
+.womens-collection {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: brown;
+  text-decoration-thickness: 6px;
+  text-align: center;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.details h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.rating {
+  font-size: 18px;
+  color: #f5c518; /* Golden color for stars */
+}
+
+.like-button, .order-button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.like-button {
+  background-color: #ff0066;
+  color: white;
+}
+
+.order-button {
+  background-color: #71db34;
+  color: white;
+}
+
+.like-button:hover, .order-button:hover {
+  opacity: 0.8;
+}
+
+.kids-collection{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: brown;
+  text-decoration-thickness: 6px;
+  text-align: center;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+#about {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://example.com/shoes-background.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.brand-name {
+  font-weight: bold;
+  color: #ffcc00;
+  font-size: 1.3em;
+}
+
+strong {
+  color: #ffcc00;
+}
+
+em {
+  color: #00eaff;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5em;
+  }
+
+  p {
+      font-size: 1.1em;
+  }
+}
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+#contact {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff5722;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons .linkedin {
+  background-color: #0077b5;
+}
+
+.social-icons .github {
+  background-color: #333;
+}
+
+.social-icons .facebook {
+  background-color: #3b5998;
+}
+
+.social-icons .npm {
+  background-color: #cb3837;
+}
+
+.social-icons .discord {
+  background-color: #7289da;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.footer-info {
+  max-width: 600px;
+}
+
+.footer-text {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact-info {
+  font-size: 1em;
+}
+
+.contact-info a {
+  color: wheat;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: rgb(228, 228, 88);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .logo {
+      margin-bottom: 20px;
+  }
+
+  .footer-info {
+      max-width: 100%;
+  }
+}
